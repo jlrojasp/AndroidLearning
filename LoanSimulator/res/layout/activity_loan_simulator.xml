@@ -1,16 +1,66 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoanSimulator" >
-
+<?xml version="1.0" encoding="utf-8"  ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:padding="20dp">
+    
     <TextView
+        android:id="@+id/txtAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/amount"
+        android:textSize="20sp" 
+        android:textStyle="bold"/>
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/edtAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/hint_amount"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:id="@+id/txtMonths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/months" 
+        android:textSize="20sp" 
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edtMonths"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" 
+        android:hint="@string/hint_months"
+        android:layout_marginBottom="10dp">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rate" 
+        android:textSize="20sp" 
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edtRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/hint_rate" 
+        android:layout_marginBottom="10dp">
+
+    </EditText>
+    
+</LinearLayout>

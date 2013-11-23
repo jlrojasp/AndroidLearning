@@ -1,8 +1,8 @@
 package com.jlreds.loansimulator;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.Menu;
+import android.app.Activity;
 
 public class LoanSimulator extends Activity {
 
@@ -14,8 +14,7 @@ public class LoanSimulator extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.loan_simulator, menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
