@@ -1,66 +1,88 @@
-<?xml version="1.0" encoding="utf-8"  ?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:padding="20dp">
-    
+    android:orientation="vertical"
+    android:padding="20dp" >
+
     <TextView
         android:id="@+id/txtAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:text="@string/amount"
-        android:textSize="20sp" 
-        android:textStyle="bold"/>
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/edtAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:hint="@string/hint_amount"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
-    
     <TextView
-        android:id="@+id/txtMonths"
+        android:id="@+id/txtCurrencySymbol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/months" 
-        android:textSize="20sp" 
-        android:textStyle="bold"/>
+        android:layout_alignBottom="@+id/edtAmount"
+        android:layout_alignLeft="@+id/txtMonths"
+        android:layout_alignRight="@+id/txtRate"
+        android:layout_alignTop="@+id/edtAmount"
+        android:textSize="25sp"
+        android:textAlignment="gravity"
+        android:gravity="center"
+        android:text="@string/CurrencySymbol" />
 
     <EditText
         android:id="@+id/edtMonths"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/txtMonths"
+        android:layout_marginBottom="10dp"
         android:ems="10"
-        android:inputType="number" 
         android:hint="@string/hint_months"
-        android:layout_marginBottom="10dp">
-
+        android:inputType="number" 
+        android:maxLength="3">
     </EditText>
 
     <TextView
         android:id="@+id/txtRate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/rate" 
-        android:textSize="20sp" 
-        android:textStyle="bold"/>
+        android:layout_below="@id/edtMonths"
+        android:text="@string/rate"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/edtRate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/txtRate"
+        android:layout_marginBottom="10dp"
         android:ems="10"
-        android:inputType="number"
-        android:hint="@string/hint_rate" 
-        android:layout_marginBottom="10dp">
+        android:hint="@string/hint_rate"
+        android:inputType="numberDecimal" 
+        android:maxLength="3">
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/edtMonths"
+        android:layout_below="@+id/txtAmount"
+        android:layout_toRightOf="@+id/txtCurrencySymbol"
+        android:inputType="numberDecimal"
+        android:hint="@string/hint_amount"
+        android:maxLength="6">
+
+        <requestFocus />
 
     </EditText>
-    
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/txtMonths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtMonths"
+        android:layout_below="@+id/txtCurrencySymbol"
+        android:text="@string/months"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

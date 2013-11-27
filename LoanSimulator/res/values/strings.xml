@@ -9,5 +9,6 @@
     <string name="rate">Rate</string>
     <string name="hint_rate">Monthly Rate</string>
     <string name="btnCalculate">Calculate</string>
+    <string name="CurrencySymbol">$</string>
 
 </resources>
